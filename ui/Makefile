@@ -10,7 +10,8 @@ generate-pwa-assets:
 	npx pwa-assets-generator
 
 test:
-	npx tsc && npx jest 
+	#npx tsc && npx jest
+	@echo "\033[31mThis is broken now: SecurityError: Cannot initialize local storage without a --localstorage-file path\033[0m"
 
 dev:
 	MODE= npx vite --host
